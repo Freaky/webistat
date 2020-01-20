@@ -92,11 +92,11 @@
 		<legend>Free-form Numeric Data</legend>
 
 		<label>Baseline<br>
-			<textarea bind:value={baseline} placeholder="4, 8, 15, 16, 23 and 42"></textarea>
+			<textarea bind:value={baseline} placeholder="4, 8, 15, 16, 23 and 42 # Comments are ignored"></textarea>
 		</label>
 
 		<label>Comparison<br>
-			<textarea bind:value={comparison} placeholder="(Anything not a number is ignored)"></textarea>
+			<textarea bind:value={comparison} placeholder="(Anything not a number is also ignored)"></textarea>
 		</label>
 
 		<label>Confidence Level
