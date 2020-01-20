@@ -1,8 +1,9 @@
 <script>
-  import { stores } from '@sapper/app';
-  const { page } = stores();
+	import throttle from 'lodash/throttle';
+	import { stores } from '@sapper/app';
+	const { page } = stores();
 
-  const BaseURL = "/webistat/";
+	const BaseURL = "/webistat/";
 
 	import { Dataset } from "../webistat.js";
 
@@ -49,7 +50,9 @@
 		};
 	}
 
-	$: result = ministat(confidence, baseline, comparison);
+	let throttled_ministat = throttle(ministat, 100);
+
+	$: result = throttled_ministat(confidence, baseline, comparison);
 </script>
 
 <style>
