@@ -1,4 +1,5 @@
 <script>
+	// jshint esversion: 6
 	import throttle from 'lodash/throttle';
 	import { stores } from '@sapper/app';
 	const { page } = stores();
@@ -9,9 +10,9 @@
 
 	const confidences = ["80", "90", "95", "98", "99", "99.5"];
 
-	let confidence = $page.query['conf'] || "95";
-	let baseline = $page.query['baseline'] || "";
-	let comparison = $page.query['comparison'] || "";
+	let confidence = $page.query.conf || "95";
+	let baseline = $page.query.baseline || "";
+	let comparison = $page.query.comparison || "";
 
 	let result;
 
