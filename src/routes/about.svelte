@@ -30,3 +30,7 @@
 	might need more samples, or there may be no meaningful difference between your
 	results.
 </p>
+
+<p>
+	Source code is available <a href="https://github.com/Freaky/webistat">on Github</a>.
+</p>
